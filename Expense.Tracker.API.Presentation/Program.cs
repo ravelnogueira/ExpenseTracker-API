@@ -1,8 +1,9 @@
 using System.Text;
-using ExpenseTracker_API.Endpoints;
+using Expense.Tracker.API.Application;
 using Microsoft.IdentityModel.Tokens;
-using Expense_Tracker_API_Application;
-using Expense.Tracker.API.Domain.Auth;
+using Expense.Tracker.API.Infrastructure.Auth;
+using Expense.Tracker.API.Presentation.Endpoints;
+using Expense.Tracker.API.Presentation.Middlewares;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,11 +28,14 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddApplicationServices();
 
-var app = builder.Build();  
+var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>();
+
+app.UseHttpsRedirection();
 
 app.UseAuthentication();
-app.UseAuthorization(); 
-
+app.UseAuthorization();
 app.MapAuthEndpoints();
 
 await app.RunAsync();

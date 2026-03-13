@@ -1,3 +1,3 @@
-namespace Expense.Tracker.API.Domain.DTO;
+namespace Expense.Tracker.API.Application.DTO;
 
 public record ValidateTokenDto(string Email, string Password);

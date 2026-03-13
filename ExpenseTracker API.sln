@@ -1,12 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseT.racker.API.Presentation", "ExpenseT.racker.API.Presentation\ExpenseT.racker.API.Presentation.csproj", "{7BF8BED5-E148-4B29-8BD9-B0A3D1644484}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expense.Tracker.API.Presentation", "Expense.Tracker.API.Presentation\Expense.Tracker.API.Presentation.csproj", "{7BF8BED5-E148-4B29-8BD9-B0A3D1644484}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expense.Tracker.API.Application", "Expense.Tracker.API.Application\Expense.Tracker.API.Application.csproj", "{66EC6D6B-6486-4C03-8999-4BC71B436B95}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expense.Tracker.API.Domain", "Expense.Tracker.API.Domain\Expense.Tracker.API.Domain.csproj", "{D3425911-2408-4007-A51C-0C80DDE554D9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expense.Tracker.API.CrossCutting", "Expense.Tracker.API.CrossCutting\Expense.Tracker.API.CrossCutting.csproj", "{58B3F515-3C4E-4043-9A6E-D51C9BC02694}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expense.Tracker.API.Infrastructure", "Expense.Tracker.API.Infrastructure\Expense.Tracker.API.Infrastructure.csproj", "{F0A66A86-252A-49C7-8589-0319CFC7CB1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +32,9 @@ Global
 		{58B3F515-3C4E-4043-9A6E-D51C9BC02694}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58B3F515-3C4E-4043-9A6E-D51C9BC02694}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58B3F515-3C4E-4043-9A6E-D51C9BC02694}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0A66A86-252A-49C7-8589-0319CFC7CB1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0A66A86-252A-49C7-8589-0319CFC7CB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0A66A86-252A-49C7-8589-0319CFC7CB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0A66A86-252A-49C7-8589-0319CFC7CB1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,13 +1,15 @@
-using System.Text;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Text;
+using Expense.Tracker.API.Application.DTO;
+using Expense.Tracker.API.Application.Interfaces;
+using Expense.Tracker.API.CrossCutting;
+using Expense.Tracker.API.Domain.ErrorCodes;
+using Expense.Tracker.API.Infrastructure.Auth;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using Expense.Tracker.API.Domain.DTO;
-using System.IdentityModel.Tokens.Jwt;
-using Expense.Tracker.API.Domain.Auth;
-using Expense_Tracker_API_Application.Interfaces;
 
-namespace Expense_Tracker_API_Application.Services;
+namespace Expense.Tracker.API.Application.Services;
 
 public class AuthService : IAuthService
 {
@@ -18,17 +20,17 @@ public class AuthService : IAuthService
         _configuration = configuration.Value;
     }
 
-    public Task<string?> ValidateUserAsync(ValidateTokenDto request)
+    public Task<string> ValidateUserAsync(ValidateTokenDto request)
     {
         var isValid = request.Email == _configuration.UserName && request.Password == _configuration.PassWord;
 
         if (!isValid)
-            throw new Exception("Invalid username or password");
+            throw new AppException(ErrorCodes.InvalidCredentials, "Invalid username or password");
 
         return GenerateToken(request.Email);
     }
 
-    private Task<string?> GenerateToken(string email)
+    private Task<string> GenerateToken(string email)
     {
         var claims = new[]
         {
@@ -46,6 +48,6 @@ public class AuthService : IAuthService
         );
 
         var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
-        return Task.FromResult(tokenString)!;
+        return Task.FromResult(tokenString);
     }
 }

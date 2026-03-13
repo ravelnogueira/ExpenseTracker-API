@@ -1,4 +1,4 @@
-namespace Expense.Tracker.API.Domain.Auth;
+namespace Expense.Tracker.API.Infrastructure.Auth;
 
 public class AuthConfiguration
 {

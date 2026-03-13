@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
-        <RootNamespace>Expense_Tracker_API_Application</RootNamespace>
+        <RootNamespace>Expense.Tracker.API.Application</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
@@ -16,7 +16,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Expense.Tracker.API.CrossCutting\Expense.Tracker.API.CrossCutting.csproj" />
       <ProjectReference Include="..\Expense.Tracker.API.Domain\Expense.Tracker.API.Domain.csproj" />
+      <ProjectReference Include="..\Expense.Tracker.API.Infrastructure\Expense.Tracker.API.Infrastructure.csproj" />
     </ItemGroup>
 
     <ItemGroup>

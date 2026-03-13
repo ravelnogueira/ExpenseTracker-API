@@ -1,9 +1,9 @@
-using Expense.Tracker.API.Domain.DTO;
+using Expense.Tracker.API.Application.DTO;
 
-namespace Expense_Tracker_API_Application.Interfaces;
+namespace Expense.Tracker.API.Application.Interfaces;
 
 public interface IAuthService
 {
-    Task<string?> ValidateUserAsync(ValidateTokenDto request);
+    Task<string> ValidateUserAsync(ValidateTokenDto request);
 
 }

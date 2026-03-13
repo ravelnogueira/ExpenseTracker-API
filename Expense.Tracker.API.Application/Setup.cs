@@ -1,9 +1,8 @@
+using Expense.Tracker.API.Application.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
-using Expense_Tracker_API_Application.Services;
-using Expense_Tracker_API_Application.Interfaces;
+using Expense.Tracker.API.Application.Services;
 
-
-namespace Expense_Tracker_API_Application;
+namespace Expense.Tracker.API.Application;
 
 public static class ServiceCollectionExtensions
 {
