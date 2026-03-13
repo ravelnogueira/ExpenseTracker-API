@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <RootNamespace>Expense_Tracker_API_Application</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.14" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="11.0.0-preview.2.26159.112" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.14" />
+      <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.16.0" />
+      <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.16.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Expense.Tracker.API.Domain\Expense.Tracker.API.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.AspNetCore">
+        <HintPath>..\..\..\.dotnet\shared\Microsoft.AspNetCore.App\9.0.2\Microsoft.AspNetCore.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+      <Reference Include="Microsoft.Extensions.Options">
+        <HintPath>..\..\..\.dotnet\shared\Microsoft.AspNetCore.App\9.0.2\Microsoft.Extensions.Options.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>

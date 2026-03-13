@@ -1,0 +1,139 @@
+############################
+# BUILD / OUTPUT
+############################
+bin/
+obj/
+out/
+publish/
+artifacts/
+TestResults/
+*.cache
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+############################
+# .NET / DOTNET
+############################
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nuget.props
+*.nuget.targets
+*.lock.json
+
+############################
+# NUGET
+############################
+packages/
+*.nupkg
+*.snupkg
+.nuget/
+*.nuget.g.props
+*.nuget.g.targets
+
+############################
+# RIDER
+############################
+.idea/
+*.sln.iml
+
+############################
+# VISUAL STUDIO
+############################
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+############################
+# VSCODE
+############################
+.vscode/
+
+############################
+# OS FILES
+############################
+.DS_Store
+Thumbs.db
+desktop.ini
+
+############################
+# LOGS
+############################
+*.log
+logs/
+log/
+
+############################
+# COVERAGE / TEST
+############################
+coverage/
+*.coverage
+*.coveragexml
+*.trx
+
+############################
+# EF / DATABASE
+############################
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+############################
+# SECRETS / CONFIG
+############################
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.local.json
+secrets.json
+*.secret.json
+
+############################
+# DOCKER
+############################
+docker-compose.override.yml
+docker-compose.local.yml
+
+############################
+# PUBLISH PROFILES
+############################
+Properties/PublishProfiles/
+
+############################
+# TEMP / CACHE
+############################
+*.tmp
+*.temp
+*.cache
+*.bak
+*.swp
+
+############################
+# RESHARPER
+############################
+_ReSharper*/
+*.DotSettings.user
+
+############################
+# NPM / FRONT (caso tenha depois)
+############################
+node_modules/
+dist/
+build/
+
+############################
+# AZURE / CLOUD
+############################
+.local.settings.json
+
+############################
+# CERTIFICATES
+############################
+*.pfx
+*.p12
+*.crt
+*.key
